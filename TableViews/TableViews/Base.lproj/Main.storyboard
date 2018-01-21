@@ -33,6 +33,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="44" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="44" id="Sej-q8-WXI"/>
+                                                        <constraint firstAttribute="height" constant="44" id="Tbw-WC-XVh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eyA-zF-fCk">
@@ -65,6 +66,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="aimageView" destination="Xjz-6K-TBu" id="VeT-R2-9dm"/>
                                             <outlet property="subTitle" destination="O8G-Nq-gOG" id="GTS-8N-OSk"/>
                                             <outlet property="title" destination="UWB-Xk-gBk" id="BMb-0y-IU8"/>
                                         </connections>
@@ -85,6 +87,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="modelView" destination="lxS-IC-9N7" id="foe-Ut-Thu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="lxS-IC-9N7" customClass="ModelView" customModule="TableViews" customModuleProvider="target"/>

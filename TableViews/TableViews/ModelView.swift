@@ -9,7 +9,8 @@
 import UIKit
 class ModelView :NSObject, UITableViewDataSource, UITableViewDelegate
 {
- 
+    var delegate: ViewController!
+    
     var cellIdentifier = "cell"
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,9 +21,11 @@ class ModelView :NSObject, UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        var message = "Do you wish to delete row:\(indexPath.row) in section :\(indexPath.section)"
         
         
+        let alert = UIAlertController(title: "Alert Delete", message: "Do you really want to delete?", preferredStyle: .actionSheet)
+        
+            self.delegate.present(alert, animated: true, completion: nil)
         
     }
     
@@ -31,6 +34,7 @@ class ModelView :NSObject, UITableViewDataSource, UITableViewDelegate
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TableViewCell
         cell.title.text = "Anything title"
         cell.subTitle.text = "Sub title anything"
+        cell.aimageView.image = UIImage(named:"tshirt")
         return cell
     }
     
