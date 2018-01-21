@@ -22,7 +22,7 @@ class ModelView :NSObject, UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         var message = "Do you wish to delete row:\(indexPath.row) in section :\(indexPath.section)"
         
-        var actionSheet = U
+        
         
     }
     

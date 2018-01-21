@@ -32,6 +32,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2zD-Ny-Fwa">
                                                     <rect key="frame" x="15" y="0.0" width="44" height="44"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="c8s-fh-bF6"/>
                                                         <constraint firstAttribute="width" constant="44" id="mgh-wR-bnu"/>
                                                     </constraints>
                                                 </imageView>
@@ -65,6 +66,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="aImageView" destination="2zD-Ny-Fwa" id="vph-V2-Cfi"/>
                                             <outlet property="subTitle" destination="9SR-n6-gL7" id="GNK-xN-7hG"/>
                                             <outlet property="title" destination="zha-CE-nTc" id="2J2-0A-B2d"/>
                                         </connections>

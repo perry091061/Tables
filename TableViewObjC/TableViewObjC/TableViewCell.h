@@ -11,5 +11,5 @@
 @interface TableViewCell : UITableViewCell
 @property (strong,nonatomic) IBOutlet UILabel *title;
 @property (strong,nonatomic) IBOutlet UILabel *subTitle;
-
+@property (strong,nonatomic) IBOutlet UIImageView *aImageView;
 @end

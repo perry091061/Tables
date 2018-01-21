@@ -17,6 +17,7 @@ NSString *cellIdentifier = @"cell";
     
     cell.title.text = [NSString stringWithFormat:@"Title row %ld",(long)indexPath.row];
     cell.subTitle.text = [NSString stringWithFormat:@"Sub title row %ld",indexPath.row];
+    cell.aImageView.image = [UIImage imageNamed:@"tshirt"];
     return cell;
 }
 
