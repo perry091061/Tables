@@ -7,9 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "ViewModel.h"
 
 @interface ViewController ()
  
+
+
+@property (strong, nonatomic) IBOutlet ViewModel *modelview;
 
 @end
 
@@ -17,6 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     
+    self.modelview.delegate = self;
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

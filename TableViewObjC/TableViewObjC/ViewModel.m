@@ -11,6 +11,8 @@
 @implementation ViewModel
 NSString *cellIdentifier = @"cell";
 
+
+
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
     TableViewCell *cell = (TableViewCell *)  [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
@@ -38,6 +40,14 @@ NSString *cellIdentifier = @"cell";
 -(NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
     return [NSString stringWithFormat:@"Section Footer %ld",section];
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert DELETE" message:@"DO YOU WISH TO DELETE?" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    
+    [self.delegate presentViewController:alert animated:true completion:nil];
 }
 
 @end

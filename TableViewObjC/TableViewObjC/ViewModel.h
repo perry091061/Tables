@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "TableViewCell.h"
 
-@interface ViewModel : NSObject <UITableViewDelegate, UITableViewDataSource>
 
+@interface ViewModel : NSObject <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) id delegate;
 @end
